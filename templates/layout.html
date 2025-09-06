@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Site</title>
+    <style>
+        /* General body and font settings */
+        body { 
+            font-family: "Fira Code", monospace; 
+            background-color: #282c34; /* Atom One Dark background */
+            color: #abb2bf; /* default text color */
+            margin: 0; 
+            padding: 0; 
+        }
+
+        /* Main container */
+        .container { 
+            width: 80%; 
+            margin: auto; 
+            padding: 20px; 
+        }
+
+        h1 { 
+            text-align: center; 
+            color: #61dafb; /* heading color */
+        }
+
+        a { 
+            text-decoration: none; 
+        }
+
+        /* Blog post card styling */
+        .post { 
+            background: #3a3f4b; /* slightly lighter than background */
+            padding: 15px; 
+            margin-bottom: 15px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5); 
+        }
+        .post h2 { 
+            margin: 0; 
+            color: #e06c75; /* title color */
+        }
+        .post p { 
+            margin: 10px 0; 
+        }
+        .post .meta { 
+            font-size: 0.85em; 
+            color: #56b6c2; /* meta info color */
+        }
+
+        /* Button styling */
+        .btn { 
+            display: inline-block; 
+            padding: 5px 10px; 
+            border-radius: 5px; 
+            color: white; 
+            margin-top: 5px; 
+            cursor: pointer; 
+        }
+
+        .edit-btn { 
+            background-color: #f1c40f; /* Edit button: Yellow */ 
+        }
+        .edit-btn:hover { 
+            background-color: #d4ac0d; 
+        }
+
+        .delete-btn { 
+            background-color: #e74c3c; /* Delete button: Red */ 
+        }
+        .delete-btn:hover { 
+            background-color: #c0392b; 
+        }
+
+        .add-btn { 
+            background-color: #61dafb; /* Add button: Blue */ 
+            color: #282c34; 
+        }
+        .add-btn:hover { 
+            background-color: #21a1f1; 
+            color: #fff; 
+        }
+
+        /* Form input and textarea styling */
+        form input, form textarea { 
+            width: 100%; 
+            padding: 10px; 
+            margin-bottom: 10px; 
+            border-radius: 5px; 
+            border: 1px solid #61dafb; 
+            background-color: #21252b; 
+            color: #abb2bf; 
+        }
+
+        /* Form submit button */
+        form button { 
+            padding: 10px 20px; 
+            border: none; 
+            border-radius: 5px; 
+            background-color: #28a745; /* green */ 
+            color: white; 
+            cursor: pointer; 
+        }
+        form button:hover { 
+            background-color: #218838; 
+        }
+
+        /* Back button styling */
+        a.back-link {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #61dafb; /* blue for Go Back */
+            color: #282c34; /* contrast text */
+            text-decoration: none;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        a.back-link:hover {
+            background-color: #21a1f1;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

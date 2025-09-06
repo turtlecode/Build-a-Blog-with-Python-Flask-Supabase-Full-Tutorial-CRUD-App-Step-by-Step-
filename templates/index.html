@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Blog Posts</h1>
+<a class="btn add-btn" href="/add">Add New Post</a>
+{% for post in posts %}
+<div class="post">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.content }}</p>
+    <div class="meta">Created at: {{ post.created_at }}</div>
+    <a class="btn edit-btn" href="/edit/{{ post.id }}">Edit</a>
+    <a class="btn delete-btn" href="/delete/{{ post.id }}">Delete</a>
+</div>
+{% endfor %}
+{% endblock %}
